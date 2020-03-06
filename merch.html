@@ -5,59 +5,103 @@
     <meta name="description" content="Shrek's Presidential Campaign"/>
     <meta name="keywords" content="Shrek, President, Fill, The, Swamp"/>
     <title>Shrek 2020</title>
-    <link rel="stylesheet" type="text/css" media="(min-width: 1000px)" href="lg_stylesheet.css" />
-    <link rel="stylesheet" type="text/css" media="(min-width: 200px) and (max-width:999px)" href="sm_stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="./merch_stylesheet.css" />
+    <!--<link rel="stylesheet" type="text/css" media="(min-width: 200px) and (max-width:999px)" href="sm_stylesheet.css" />-->
     <link rel="stylesheet" type="text/css" href="topnav.css" />
-    <style type="text/css">
+    <!--<style type="text/css">
         @media (min-width: 1000px) {
             .middle_section{display: flex;}
-            .content {background-color: #bdf4ff; width: 60%; padding-right: 10%; padding-left: 10%; padding-top: 5%;}
+            .content {width: 60%; padding-right: 10%; padding-left: 5%; padding-top: 5%;}
             #right_bar {width: 20%; position:relative; background-color: #ffffff; padding: 5px 5px;}
             #right_bar h2 {position:relative; color: #ff0000; text-align: center;}
+            .grid {margin-top:3%; position:relative; width:50%; text-align:center; margin-left:25%; margin-right:25%; display:flex; flex-flow:row wrap; justify-content:space-around}
+            .product {width:250px; margin:10px; position:relative; display:inline-block}
+            .product_img {max-width:600px; max-height:600px; width:100%; height:80%; display:inline-block}
+            .product_name {max-width:600px; width:100%; height 8%; display:inline-block}
+            .product_price {max-width:600px; width:100%; height 8%; display:inline-block}
         }
         @media (min-width: 200px) and (max-width: 999px){
             .middle_section{display: inline-block;}
-            .content {background-color: #bdf4ff; width: 80%; padding-right: 10%; padding-left: 10%; padding-top: 5%;}
+            .content {width: 80%; padding-right: 10%; padding-left: 10%; padding-top: 5%;}
             #right_bar {width: 100%; position:relative; background-color: #ffffff; padding: 5px 5px;}
             #right_bar h2 {position:relative; color: #ff0000; text-align: center;}
+            .grid {margin-top:3%; position:relative; width:50%; text-align:center; margin-left:25%; margin-right:25%; display:flex; flex-flow:row wrap; justify-content:space-around}
+            .product {width:250px; margin:10px; position:relative; display:inline-block}
+            .product_img {max-width:600px; max-height:600px; width:100%; height:80%; display:inline-block}
+            .product_name {max-width:600px; width:100%; height 8%; display:inline-block}
+            .product_price {max-width:600px; width:100%; height 8%; display:inline-block}
         }
-    </style>
+    </style>-->
 </head>
 
-<div class=header>
-    <h1 id="header_text"></h1>
+<header class="header">
+
+        <ul class="header_top_flex">
+            <li><h1 width="250px">Fill the Swamp</h1></li>
+
+            <li><img src="./img/shrek_2020_circle.png" alt="Shrek 2020 Logo" height="250px" width="565px"></li>
+            <li><p width="250px" style="font-size: 20pt; background-color: blue;"> Donate</p></li>
+        </ul>
+
+
         <ul id="header_nav">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">Meet Shrek</a></li>
             <li><a href="issues.html">Issues</a></li>
             <li><a href="events.html">Events</a></li>
-            <li><a href="merch.html">[Store]</a></li>
+            <li><a href="merch.html">Store</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="volunteer.html">Get Involved</a></li>
         </ul>
-</div>
-<main role="main">
-    <img src="/img/hat1.jpeg" alt="description" 
-    height="48" width="100" longdesc="desc.txt" />
+</header>
+<main>
+    <h1 class="store_title">Shrek 2020 Store</h1>
 
-    <article>
-        <h2>Title 1</h2>
-        <p>Content 1</p>
-    </article>
-    <article>
-        <h2>Title 2</h2>
-        <p>Content 2</p>
-    </article>
+    <div class=grid>
+        <div class=product>
+            <img class="product_img" src="./img/hat1.jpeg"/>
+            <div class="product_name">Shrek 2020 Green and White Hat</div>
+            <div class="product_price">$20.00</div>
+        </div>
+        <div class=product>
+            <img class="product_img" src="img/hat2.jpeg"/>
+            <div class="product_name">Shrek 2020 Green Hat</div>
+            <div class="product_price">$20.00</div>
+        </div>
+        <div class=product>
+            <img class="product_img" src="img/shirt1.jpeg"/>
+            <div class="product_name">Shrek 2020 Black Logo Shirt</div>
+            <div class="product_price">$30.00</div>
+        </div>
+        <div class=product>
+            <img class="product_img" src="img/shirt2.jpeg"/>
+            <div class="product_name">Shrek 2020 Green Logo Shirt</div>
+            <div class="product_price">$30.00</div>
+        </div>
+        <div class=product>
+            <img class="product_img" src="img/shirt3.jpeg"/>
+            <div class="product_name">Shrek 2020 Swamp Shirt</div>
+            <div class="product_price">$35.00</div>
+        </div>
+        <div class=product>
+            <img class="product_img" src="img/mug.jpg"/>
+            <div class="product_name">Shrek 2020 Mug</div>
+            <div class="product_price">$15.00</div>
+        </div>
+        <div class=product>
+            <img class="product_img" src="img/pin.jpg"/>
+            <div class="product_name">Shrek 2020 Button Pin</div>
+            <div class="product_price">$10.00</div>
+        </div>
+        <div class=product>
+            <img class="product_img" src="img/sticker.png"/>
+            <div class="product_name">Shrek 2020 Sticker</div>
+            <div class="product_price">$10.00</div>
+        </div>
+        <div class=product>
+            <img class="product_img" src="img/comingsoon.jpg"/>
+            <div class="product_name">Shrek 2020 Figures</div>
+            <div class="product_price">???</div>
+        </div>
+    </div>
 </main>
-<section>
-    A group of related content
-</section>
-<aside>
-    Sidebar
-</aside>
-<footer>
-    <p>&copy; HTML CheatSheet</p>
-    <address>
-        Contact <a href="mailto:me@htmlg.com">me</a>
-    </address>
-</footer>
