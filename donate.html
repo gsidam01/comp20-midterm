@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title> Donation popup</title>
+    
+    <link rel="stylesheet" type="text/css" href="./donate_stylesheet.css">
+
+    <script type="text/javascript">
+        card_type_good = false;
+        chname_good = false;
+        exp_date_good = false;
+        cvv_good = false;
+        email_good = false;
+
+        function show_credit_info() 
+        {
+            document.getElementById("hidden_form").style.display="inline";
+            document.getElementById("shrek_image").style.height="1600px";
+        }
+
+        function validate_credit()
+        {
+            no_issues = true;
+
+            check_card_type();
+            no_issues = (no_issues && card_type_good); 
+            check_holder_name();
+            no_issues = (no_issues && chname_good);
+            check_exp_date();
+            no_issues = (no_issues && exp_date_good);
+            check_cvv();
+            no_issues = (no_issues && cvv_good);
+
+            return no_issues;
+        }
+
+        function check_card_type()
+        {
+            var contents = document.getElementById("credit_card_number").value;
+            visa_regex =  /^4[0-9]{12}(?:[0-9]{3})?$/;
+            mastercard_regex =  /^(?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}$/;
+            discover_regex = /^6(?:011|5[0-9]{2})[0-9]{12}$/;
+            if (contents.match(visa_regex)) {
+                document.getElementById("visa").style.opacity="1";
+                card_type_good = true;
+                return;
+            } else {
+                document.getElementById("visa").style.opacity="0.4";
+            }
+
+            if (contents.match(mastercard_regex)) {
+                document.getElementById("mastercard").style.opacity="1";
+                card_type_good = true;
+                return;
+            } else {
+                document.getElementById("mastercard").style.opacity="0.4";
+            }
+
+            if (contents.match(discover_regex)) {
+                document.getElementById("discover").style.opacity="1";
+                card_type_good = true;
+                return;
+            } else {
+                document.getElementById("discover").style.opacity="0.4";
+            }
+
+            card_type_good = false;
+            document.getElementById("credit_card_number").value = "Field is required.";
+            document.getElementById("credit_card_number").style.backgroundColor = "#f88";
+            document.getElementById("credit_card_number").style.boxShadow = "0 0 10px #ff0000";
+        }
+
+        function check_holder_name()
+        {
+            var contents = document.getElementById("chnameinput").value;
+            if (contents != "") {
+                chname_good = true;
+            } else {
+                chname_good = false;
+                document.getElementById("chnameinput").value = "Field is required.";
+                document.getElementById("chnameinput").style.backgroundColor = "#f88";
+                document.getElementById("chnameinput").style.boxShadow = "0 0 10px #ff0000";
+            }
+        } 
+
+        function check_exp_date()
+        {
+            var contents = document.getElementById("expiration_input").value;
+            mmddyyyy_regex = /(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d/;
+            if (contents.match(mmddyyyy_regex)) {
+                exp_date_good = true;
+            } else {
+                if (contents != "") {
+                    document.getElementById("expiration_input").value = "Please enter mm/dd/yyyy";
+                } else {
+                    document.getElementById("expiration_input").value = "Field is required.";
+                }
+                exp_date_good = false;
+                document.getElementById("expiration_input").style.backgroundColor = "#f88";
+                document.getElementById("expiration_input").style.boxShadow = "0 0 10px #ff0000";
+
+            }
+        }
+
+        function check_cvv()
+        {
+            var contents = document.getElementById("cvv_input").value;
+            cvv_regex = /^[0-9]{3,4}$/; 
+            if (contents.match(cvv_regex)) {
+                cvv_good = true;
+            } else {
+                if (contents != "") {
+                    document.getElementById("cvv_input").value = "Please enter a CVV";
+                } else {
+                    document.getElementById("cvv_input").value = "Field is required."; 
+                }
+                cvv_good = false;
+                document.getElementById("cvv_input").style.backgroundColor = "#f88";
+                document.getElementById("cvv_input").style.boxShadow = "0 0 10px #ff0000";
+            }
+
+
+        }
+
+        function remove_errors(text_name)
+        {
+            document.getElementById(text_name).value = "";
+            document.getElementById(text_name).style.backgroundColor = "#fff";
+            document.getElementById(text_name).style.boxShadow = "0 0 0px #000000";
+        }
+    </script>
+
+
+</head>
+<body>
+    <div class="header">
+        <img src="./img/shrek2020.jpg" height="90px">
+        <h1 class="slogan">
+            Fill The Swamp
+        </h1>
+        <a href="./index.html"> Continue to main site </a>
+    </div>
+
+    <div class="shrek_image" id="shrek_image">
+        <img id="rally_image" src="./img/Shrekrally.png">
+        <img src="./img/shrekpng.png" width="100%" 
+        style="position: absolute; bottom: 0px">
+    </div>
+
+    <div class="donation_form">
+        <div style="font-family: 'Shrek', arial; font-size: 32pt; color: #75f514; 
+        padding: 20px 5px 10px 5px;">
+            Shrek needs YOUR support. 
+        </div>
+        <div style="padding: 20px; color: #523213;">
+        Together we can ogre-take incumbents in Washington and fill the swamp
+         once and for all!
+        
+        Select a donation amount:
+        </div>
+        <form name="donate_choices" style="padding-top: 10px;">  
+            <label class="donate">
+                <input type="radio" name="donate" onclick="show_credit_info()">
+                <span > $5 </span> 
+            </label>
+            <label class="donate">
+                <input type="radio" name="donate" onclick="show_credit_info()">
+                <span> $10 </span> 
+            </label>
+            <label class="donate">
+                <input type="radio" name="donate" onclick="show_credit_info()">
+                <span> $20 </span> 
+            </label>
+            <label class="donate">
+                <input type="radio" name="donate" onclick="show_credit_info()">
+                <span> $50 </span> 
+            </label>
+            <label class="donate">
+                <input type="radio" name="donate" onclick="show_credit_info()">
+                <span> $100 </span> 
+            </label>
+            <label class="donate">
+                <input type="radio" name="donate" onclick="show_credit_info()">
+                <span> $200 </span> 
+            </label>
+        </form>
+
+        <form id="hidden_form" onsubmit="return validate_credit()">
+                <div id="chname">Card Holder Name:* </div>
+                 <input type="text" name="chname" id="chnameinput" 
+                 class="text_in" onblur="check_holder_name()"
+                 onfocus="remove_errors('chnameinput')"> <br> 
+
+                <div id="card_number">Card Number:*&nbsp &nbsp
+                    <img src="./img/visa.png" width="40px" id="visa"> 
+                    <img src="./img/mastercard.png" width="45px" id="mastercard">
+                    <img src="./img/discover.png" width="40px" id="discover">
+
+                </div>
+                <input type="text" name="credit_card_number" id="credit_card_number" 
+                class="text_in" onblur="check_card_type()" 
+                onfocus="remove_errors('credit_card_number')"> <br> 
+
+                <div id="expiration">Expiration Date:*</div>
+                <input type="text" name="expiration" class="text_in" 
+                id="expiration_input" onblur="check_exp_date()" 
+                onfocus="remove_errors('expiration_input')"> <br> 
+
+                <div id="cvv">CVV:*</div>
+                <input type="text" name="cvv" class="text_in" id="cvv_input"
+                onfocus="remove_errors('cvv_input')" onblur="check_cvv()"> <br> 
+
+                <input type="submit" class="shrek_submit"  value="Donate">
+        </form>
+
+
+        <div style="font-family: 'Shrek', arial; font-size: 32pt; color: #75f514; 
+        padding-top: 20px;"  >
+            Join the elist 
+        </div>
+        <div style="padding: 20px 20px; color: #523213;">
+        Sign up to receive campaign updates and show your support!
+        <br>
+            <form style="font-size: 20pt; line-height: 1.8;">
+                First Name: <br>
+                <input type="text" name="fname" class="text_in"> <br> 
+
+                Last Name: <br>
+                <input type="text" name="lname" class="text_in"> <br> 
+
+                Email:* <br>
+                <input type="text" name="email" class="text_in"> <br> 
+
+                <input style="width: 100px" type="button" id="shrek_button" 
+                class="shrek_button" value="Join">
+            </form>
+        </div>
+        
+        
+    </div>
+
+
+
+    
+
+</body>
+</html>

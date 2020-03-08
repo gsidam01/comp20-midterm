@@ -1,0 +1,196 @@
+/*@import url(https://db.onlinewebfonts.com/c/2179845ee578cd3bb30b55dc922bfb38?family=Shrek);*/
+@font-face {font-family: "Shrek";
+    src: url("./font/Shrek/shrek.eot"); /* IE9*/
+    src: url("./font/Shrek/shrek(iefix).eot") format("embedded-opentype"), /* IE6-IE8 */
+    url("./font/Shrek/shrek.woff2") format("woff2"), /* chrome firefox */
+    url("./font/Shrek/shrek.woff") format("woff"), /* chrome firefox */
+    url("./font/Shrek/shrek.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+    url("./font/Shrek/shrek.svg") format("svg"); /* iOS 4.1- */
+}
+
+body { 
+    background-color: #ffffff; 
+    margin: 0px; 
+    padding: 0px;
+    display: flex;
+    flex-flow: row wrap;
+    font-family: arial;
+}
+
+.slogan {
+    margin: 0px;
+    padding: 0px;
+    font-size: 32pt;
+    position: absolute;
+    left: 240px;
+    color: #523213;
+    font-family: 'Shrek', arial;
+}
+
+@media(max-width: 885px) {
+    .slogan {
+        font-size: 20pt;
+        top: 10px;
+    }
+    .header a {
+        top: 50px;
+    }
+}
+
+div.shrek_image {
+    background-color: blue;
+    height: 1000px;
+    width: 40%;
+    overflow: hidden;
+    display: block;
+    position: relative;
+
+}
+
+div.donation_form {
+    background-color: white;
+    height: 1000px;
+    width: 60%;
+    text-align: center;
+    font-size: 16pt;
+    line-height: 1.2;
+    position: relative;
+    z-index: 2;
+}
+
+div.header {
+    display: flex;
+    align-items: center;
+    background-color: #75f514;
+    justify-content: space-between;
+    width: 100%;
+    /*position: fixed;*/
+    position: relative;
+}
+
+.header a {
+    position: absolute;
+    right: 20px;
+    font-size: 14pt;
+    
+    color: #523213;
+}
+
+.header a:hover {
+    text-decoration: underline;
+    color: #111;
+}
+
+.donate {
+    display: inline-block;
+    margin-left: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 90px;
+    position: relative; 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    user-select: none;
+}
+
+.donate input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.donate span {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100px;
+    background-color: #ff2222;
+    line-height: 70px;
+    border-radius: 10px;
+    color: #d5de2e;
+    font-size: 20pt;
+    cursor: pointer;
+}
+
+.donate:hover input ~ span {
+    background-color: #2222ff;
+}
+
+.donate input:checked ~ span {
+    background-color: #0a0aff;
+}
+
+.shrek_button, .shrek_submit {
+    font-size: 20pt;
+    font-family: 'Shrek', arial;
+    background-color: #75f514;
+    text-decoration: none;
+    color: #523213;
+    padding: 10px;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.shrek_button:hover, .shrek_submit:hover {
+    background-color: #2222ff;
+}
+
+.shrek_button:focus, .shrek_submit:focus {
+    outline: 0;
+}
+
+.text_in {
+    width: 400px;
+    font-size: 20pt;
+    border: #523213 solid 3px;
+    padding: 2px;
+    color: #523213;
+}
+
+.text_in:focus {
+    outline: 0;
+}
+
+@media(max-width: 710px) {
+    body {
+        flex-direction: column-reverse;
+    }
+
+    div.donation_form {
+        width: 100%;
+    }
+
+    div.shrek_image {
+        width: 100%;
+        background-color: #fff;
+    }
+    div.donation_form {
+        height: 400px;
+    }
+
+    #rally_image {
+        display: none;
+    }
+}
+
+#hidden_form {
+    display: none;
+    font-size: 20pt; 
+    line-height: 1.8;
+    color: #523213;
+}
+
+#card_number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mastercard, #discover, #visa {
+    opacity: 0.4;
+}
+

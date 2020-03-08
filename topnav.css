@@ -10,15 +10,11 @@
     url("./font/Shrek/shrek.svg") format("svg"); /* iOS 4.1- */
 }
 
-
-
-
-/* Everything related to my Header bar at https://gsidam01.github.io/comp20-hw3/ */
 .header {
     position: fixed;
     z-index: 10;
     border-bottom-style: double;
-    border-bottom-color: #964b00;
+    border-bottom-color: #523213;
     background-color: #75f514;
     width: 100%;
     left: 0;
@@ -31,35 +27,25 @@
 
 /* Top of the Header, Logo  */
 
-.header_top_flex {
+div.header_top_flex {
     display: flex;
     list-style-type: none;
     align-items: center;
-    display: flex;
-    justify-content: center;
-}
-
-.header_top_flex li {
-    margin: 0px;
-    display: inline-block;
+    justify-content: space-between;
+    font-family: 'Shrek', arial;
 }
 
 .header_top_flex h1 {
-    right: 75%;
-    /* //margin-right: 20px; */
-}
-.header_top_flex p {
-    left: 75%;
-    /* margin-left: 20px; */
-}
-.header_top_flex img {
-    /* width: 50%; */
+    margin: 0px;
+    padding: 0px;
+    font-size: 32pt;
+    color: #523213;
 }
 
 /* Bottom of the Header, Nav Bar */
 .header ul {
     padding-left: 0px;
-    margin-top: -20px;
+    padding-right: 5px;
 }
 
 #header_nav li {
@@ -67,8 +53,8 @@
     display: inline-block;
     position: relative;
     list-style-type: none;
-    width: 12%;
     font-size: 25px;
+    margin-top: 2px;
 }
 
 #header_nav li:hover {
@@ -81,11 +67,13 @@
 
 #header_nav a {
     display:inline-block;
+    border: solid 2px #523213;
     text-decoration: none;
-    color: #03A900;
+    color: #523213;
     font-weight: bold;
     font-size: 75%;
     padding: 7px 15px;
+    border-radius: 5px;
 }
 
 
