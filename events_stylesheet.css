@@ -54,10 +54,10 @@ section
 }
 
 
-@media (min-width: 1480px) {
+@media (min-width: 1070px) {
     main
     {
-        margin-top: 275px;
+        margin-top: 200px;
     }
 
     section
@@ -69,10 +69,24 @@ section
 
 }
 
-@media ((min-width: 980px) and (max-width: 1479px)) {
+@media (min-width: 575px) and (max-width: 1069px) {
     main
     {
-        margin-top: 275px;
+        margin-top: 250px;
+    }
+
+    section
+    {
+        height: 100px;
+        width: 16%;
+        padding: 0px 15px;
+    }
+}
+
+@media (min-width: 420px) and (max-width: 574px) {
+    main
+    {
+        margin-top: 300px;
     }
 
     section
