@@ -1,1 +1,210 @@
-aaa
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="topnav.css">
+    <title> Shrek 2020 </title>
+    <style type="text/css">
+
+        body {background-color: #00008b;}
+
+        div.quote {
+            text-align: center;
+            width: 100%;
+            font-family: arial;
+            font-size: 48pt;
+            color: #fff;
+        }
+        div.issues_container {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            background-color: white;
+        }
+
+        div.issue {
+            /*Do a media query here and make 100%*/
+            height: 500px;
+            width: 50%;
+            max-width: 830px;
+            position: relative;
+            
+            display: inline-block;
+            direction: rtl;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .issue img {
+            opacity: 1;
+        }
+
+        @media(max-width: 830px) {
+            div.issue {
+                width: 100%;
+            }
+        }
+
+        div.overlay {
+            position: absolute;
+            top: 50px;
+            font-size: 40pt;
+            color: #75f514;
+            font-family: "Shrek", arial;
+            text-shadow: 0 0 3px #000;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .text {
+            opacity: 0;
+            font-family: arial;
+            font-size: 16pt;
+            line-height: 1.4;
+            color: black;
+            text-shadow: none;
+            direction: ltr;
+            padding: 5px 30px;
+
+        }
+
+    </style>
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous">
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".issue").hover(function() {
+                $(this).find("img").css("opacity", "0.3");
+                $(this).find(".text").css("opacity", "1");
+            }, function() {
+                $(this).find("img").css("opacity", "1");
+                $(this).find(".text").css("opacity", "0");
+            });
+        });
+        
+    </script>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_top_flex">
+            <img src="./img/shrek_2020_circle.png" alt="Shrek 2020 Logo" height="125px">
+            <ul id="header_nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Meet Shrek</a></li>
+            <li><a href="issues.html">Issues</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="merch.html">Store</a></li>
+            <li><a href="volunteer.html">Get Involved</a></li>
+        </ul>
+        </div>       
+    </header>
+
+
+    <div class="quote">
+        "The first thing I am going to do is build a 10-foot wall around my land." -Shrek
+    </div>
+
+    <div class="issues_container">
+        <div class="issue" >
+            <img src="./img/borderwalll.jpg" height="500px" >
+            <div class="overlay"> 
+                Border Wall 
+                <div class="text">
+                    In 2016, President Trump promised the American people that he would invest in border security but he has broken that promise. Shrek realizes the threat to our quiet living posed by Lord Farquaad and another “fairy tail creature eviction.” In the first 100 days of his term, Shrek will invest $500 billion in a wall that will enclose the country completely. It will be constructed from rocks, logs, and other swamp materials.
+
+                </div>
+            </div>
+        </div>
+
+        <div class="issue"> 
+            <img src="./img/crossbow.png" height="500px">
+            <div class="overlay"> 
+                Gun Control 
+                <div class="text">
+                    When ambushed in the forest by Robin Hood and his merry men, Shrek suffered a grievous injury to his posterior. Shrek has witnessed the lethality of crossbows first hand. Since fully automatic rifles are more dangerous than crossbows, he understands just how dangerous guns can be. Shrek will use an executive order to ban the sale and manufacture of all assault weapons in the United States.
+                </div>
+            </div>
+        </div >
+
+        <div class="issue">
+            <img src="./img/everglades.jpg" height="500px">
+            <div class="overlay"> 
+                Climate Justice 
+                <div class="text">
+                    Overfishing, the introduction of invasive species, and the presence of humans is destroying the heart of America: the Everglades, our country’s largest swamp. Shrek has championed protective regulations on America’s swamps as a pivotal issue both on and off the debate stage. He is the only candidate who has pledged his commitment to fill the swamp by 2030. 
+                </div>
+            </div>
+        </div>
+
+        <div class="issue">
+            <img src="./img/onions.jpg" height="500px">
+            <div class="overlay"> 
+                Agriculture
+                <div class="text">
+                    Government subsidies have turned the breadbasket of America into a corn-basket. This single-crop agricultural system is both economically and ecologically unsustainable. That is why, in an effort to diversify America’s crop yield, Shrek will invest into a massive undertaking--the rise of the onion as the country’s staple crop. “If corn is king, then the onion will be God.”
+                </div>
+            </div>
+        </div>
+
+        <div class="issue" style="direction: ltr;">
+            <img src="./img/mob.png" height="500px" >
+            <div class="overlay"> 
+                Ogre Rights
+                <div class="text">
+                    As America’s first ogre president, Shrek will bring a new viewpoint to Washington. He grew up with the immense pressure of prejudice: angry mobs of humans would gather to force him out of their villages, and he was forced to live as an outcast. Shrek understands the struggles that other minority groups face, and he is building a strong coalition out of America’s disenfranchised.
+                </div>
+            </div>
+        </div>
+        
+        <div class="issue">
+            <img src="./img/family.jpg" height="500px">
+            <div class="overlay"> 
+                Family Values
+                <div class="text">
+                    Shrek is a loving father of three, and supports greater educational funding, paid family leave, and child care reform. Shrek is a staunch believer that the family unit is not reserved as a man, woman, and their children, but rather it should be extended to any loving union between people, ogres, donkeys and dragons.
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
