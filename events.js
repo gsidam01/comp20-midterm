@@ -4,5 +4,6 @@ function show_article(which_one)
 	for (let i = 0; i< articles.length; i++) {
 		articles[i].style.display = "none";
 	}
+	document.getElementById("opening").style.display = "none";
 	document.getElementById(which_one).style.display = "block";
 }
