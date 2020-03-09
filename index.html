@@ -25,31 +25,17 @@
     </style>
 
     <script type="text/javascript"> 
-        
-
 
         function slide_show() 
         {
             var images = ["#1", "#2", "#3"], i = 0;
 
-            
-
             (function nextImage()
             {
 
-                $(images[i++ % 3]).hide().delay(500).fadeIn(1000).delay(1000).fadeOut(500, nextImage);
+                $(images[i++ % 3]).hide().fadeIn(1000).delay(1000).fadeOut(500, nextImage);
             })();
         }
-        //     $("#1").show().delay(5000).hide();  
-        //     $("#2").delay(5000).show().delay(5000).hide();  
-        //     $("#3").delay(10000).show().delay(5000).hide(); 
-
-        //     // $("#1").fadeIn().delay(5000).fadeOut();  
-        //     // $("#2").delay(5000).fadeIn().delay(5000).fadeOut();  
-        //     // $("#3").delay(10000).fadeIn().delay(5000).fadeOut(); 
-        
-        //     setTimeout(slide_show, 15000);
-        // }  
 
     </script>
 </head>
