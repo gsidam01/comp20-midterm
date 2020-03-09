@@ -16,10 +16,27 @@
     <style type="text/css">
         main {
             position: relative;
+
         }
 
         main img {
             display: none;
+        }
+
+        a.donate_button {
+            color: #fff;
+            text-decoration: none;
+            padding: 20px 50px;
+            font-size: 48px;
+            font-family:"Shrek", arial;
+            background-color: #ff2222;
+            border-radius: 10px;
+            top: 500px;
+            left: 50%;
+            margin-left: -150px;
+            position: absolute;
+            z-index: 3;
+            box-shadow: 0 0 10px #000;
         }
 
     </style>
@@ -28,12 +45,12 @@
 
         function slide_show() 
         {
-            var images = ["#1", "#2", "#3"], i = 0;
+            var images = ["#1", "#2", "#3", "#4"], i = 0;
 
             (function nextImage()
             {
 
-                $(images[i++ % 3]).hide().fadeIn(1000).delay(1000).fadeOut(500, nextImage);
+                $(images[i++ % 4]).hide().fadeIn(1000).delay(3000).fadeOut(500, nextImage);
             })();
         }
 
@@ -57,16 +74,17 @@
 </header>
 
 <main class="slide_show">
-    <img class="my_image" id="1" src="./img/construction.jpg" width="100%">
-    <img class="my_image" id="2" src="./img/image1.png" width="100%">
-    <img class="my_image" id="3" src="./img/reading.png" width="100%">
+    <img id="1" src="./img/construction.jpg" width="100%">
+    <img id="2" src="./img/image1.png" width="100%">
+    <img id="3" src="./img/reading.png" width="100%">
+    <img id="4" src="./img/situation.png" width="100%">
+    <a href="./donate.html" class="donate_button">
+        Donate
+    </a>
 </main>
 
 <footer>
-    <p></p>
-    <address>
-        Contact <a href="">me</a>
-    </address>
+    
 </footer>
 
 </body>

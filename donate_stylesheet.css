@@ -113,6 +113,7 @@ div.header {
     color: #d5de2e;
     font-size: 20pt;
     cursor: pointer;
+    box-shadow: 0 0 10px #000;
 }
 
 .donate:hover input ~ span {

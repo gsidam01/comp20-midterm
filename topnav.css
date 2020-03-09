@@ -60,6 +60,8 @@ div.header_top_flex {
     list-style-type: none;
     font-size: 25px;
     margin-top: 2px;
+    box-shadow: 0 0 10px #000;
+    border-radius: 5px;
 }
 
 #header_nav li:hover {
