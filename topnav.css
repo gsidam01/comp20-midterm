@@ -10,8 +10,13 @@
     url("./font/Shrek/shrek.svg") format("svg"); /* iOS 4.1- */
 }
 
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
 .header {
-    position: fixed;
+    position: relative;
     z-index: 10;
     border-bottom-style: double;
     border-bottom-color: #523213;

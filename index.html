@@ -13,25 +13,52 @@
     crossorigin="anonymous">
     </script>
 
-    <!-- <script type="text/javascript"> 
-        $(document).ready(function() {
-            $("button").click(function() {
-                $("div").animate( {
-                    height: 'toggle'
-                    });
-                });
-            });
-    </script> -->
+    <style type="text/css">
+        main {
+            position: relative;
+        }
 
+        main img {
+            display: none;
+        }
+
+    </style>
+
+    <script type="text/javascript"> 
+        
+
+
+        function slide_show() 
+        {
+            var images = ["#1", "#2", "#3"], i = 0;
+
+            
+
+            (function nextImage()
+            {
+
+                $(images[i++ % 3]).hide().delay(500).fadeIn(1000).delay(1000).fadeOut(500, nextImage);
+            })();
+        }
+        //     $("#1").show().delay(5000).hide();  
+        //     $("#2").delay(5000).show().delay(5000).hide();  
+        //     $("#3").delay(10000).show().delay(5000).hide(); 
+
+        //     // $("#1").fadeIn().delay(5000).fadeOut();  
+        //     // $("#2").delay(5000).fadeIn().delay(5000).fadeOut();  
+        //     // $("#3").delay(10000).fadeIn().delay(5000).fadeOut(); 
+        
+        //     setTimeout(slide_show, 15000);
+        // }  
+
+    </script>
 </head>
 
-<body></body>
+<body onload="slide_show()">
 <header class="header">
 
         <div class="header_top_flex">
             <img src="./img/shrek_2020_circle.png" alt="Shrek 2020 Logo" height="125px">
-            <!-- <h1 width="250px">Fill the Swamp</h1>
-            <a href="donate.html"> Donate </a> -->
             <ul id="header_nav">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">Meet Shrek</a></li>
@@ -43,10 +70,12 @@
         </div>       
 </header>
 
-<main>
-    
-    
+<main class="slide_show">
+    <img class="my_image" id="1" src="./img/construction.jpg" width="100%">
+    <img class="my_image" id="2" src="./img/image1.png" width="100%">
+    <img class="my_image" id="3" src="./img/reading.png" width="100%">
 </main>
+
 <footer>
     <p></p>
     <address>
