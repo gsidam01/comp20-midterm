@@ -57,7 +57,7 @@ section
 @media (min-width: 1070px) {
     main
     {
-        margin-top: 200px;
+        margin-top: 150px;
     }
 
     section
@@ -72,7 +72,7 @@ section
 @media (min-width: 575px) and (max-width: 1069px) {
     main
     {
-        margin-top: 250px;
+        margin-top: 180px;
     }
 
     section
