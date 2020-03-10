@@ -1,7 +1,18 @@
+/*@import url(https://db.onlinewebfonts.com/c/2179845ee578cd3bb30b55dc922bfb38?family=Shrek);*/
+@font-face {font-family: "Shrek";
+    src: url("./font/Shrek/shrek.eot"); /* IE9*/
+    src: url("./font/Shrek/shrek(iefix).eot") format("embedded-opentype"), /* IE6-IE8 */
+    url("./font/Shrek/shrek.woff2") format("woff2"), /* chrome firefox */
+    url("./font/Shrek/shrek.woff") format("woff"), /* chrome firefox */
+    url("./font/Shrek/shrek.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+    url("./font/Shrek/shrek.svg") format("svg"); /* iOS 4.1- */
+}
+
+
 main
 {
     color: #0000ff;
-    font-family: arial,georgia;
+    font-family: "Shrek", arial,georgia;
     font-size: 16px;
 }
 
