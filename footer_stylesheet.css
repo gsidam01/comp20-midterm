@@ -1,10 +1,20 @@
 /*<footer id="footer">
-	Call us at: Shrek-4-prez (747-354-7739), or send an email to <a href="mailto:elect.shrek@gmail.com">elect.shrek@gmail.com</a> for all media, photo-op, and legal enquiries.
+	Call us at: Shrek 4 prez (747 354 7739), or send an email to <a href="mailto:elect.shrek@gmail.com">elect.shrek@gmail.com</a> for all media, photo-op, and legal enquiries.
 </footer>
 */
 
+@font-face {font-family: "Shrek";
+    src: url("./font/Shrek/shrek.eot"); /* IE9*/
+    src: url("./font/Shrek/shrek(iefix).eot") format("embedded-opentype"), /* IE6-IE8 */
+    url("./font/Shrek/shrek.woff2") format("woff2"), /* chrome firefox */
+    url("./font/Shrek/shrek.woff") format("woff"), /* chrome firefox */
+    url("./font/Shrek/shrek.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+    url("./font/Shrek/shrek.svg") format("svg"); /* iOS 4.1- */
+}
+
 footer
 {
+    font-family: "Shrek",arial,georgia;
     position: relative;
     height: 50px;
     width: 100%;
