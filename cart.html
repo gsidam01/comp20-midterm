@@ -8,10 +8,52 @@
     <link rel="stylesheet" type="text/css" href="./merch_stylesheet.css" />
     <!--<link rel="stylesheet" type="text/css" media="(min-width: 200px) and (max-width:999px)" href="sm_stylesheet.css" />-->
     <link rel="stylesheet" type="text/css" href="topnav.css" />
+
+    <script>
+        function loadCart() {
+            var arr =
+            for (i = 1; i <= 8; i++) {
+                if (sessionStorage.getItem(i)) {
+                    
+                }
+            }
+            document.write("<table>");
+        }
+
+        function idToProduct(id) {
+            switch(id) {
+                case 1:
+                    return "Shrek 2020 Green and White Hat";
+                    break;
+                case 2:
+                    return "Shrek 2020 Green Hat";
+                    break;
+                case 3:
+                    return "Shrek 2020 Black Logo Shirt";
+                    break;
+                case 4:
+                    return "Shrek 2020 Green Logo Shirt";
+                    break;
+                case 5:
+                    return "Shrek 2020 Swamp Shirt";
+                    break;
+                case 6:
+                    return "Shrek 2020 Mug";
+                    break;
+                case 7:
+                    return "Shrek 2020 Button Pin";
+                    break;
+                case 8:
+                    return "Shrek 2020 Sticker";
+                    break;
+                default:
+                    return "";
+            }
+        }
+    </script>
 </head>
 
 <header class="header">
-
         <div class="header_top_flex">
             <img src="./img/shrek_2020_circle.png" alt="Shrek 2020 Logo" height="125px">
             <!-- <h1 width="250px">Fill the Swamp</h1>
@@ -26,6 +68,6 @@
             </ul>
         </div>
 </header>
-<main>
+<main onload="loadCart()">
     <h1 class="store_title">Shrek 2020 Store</h1>
 </main>

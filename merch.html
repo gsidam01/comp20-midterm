@@ -22,6 +22,15 @@
                 $('img.product_img').hover(sourceSwap, sourceSwap);
             });
         });
+
+        function addCart(product) {
+            if(sessionStorage.getItem(product)) {
+                total = parseInt (sessionStorage.getItem(product));
+                sessionStorage.setItem(product,total+1);
+            }
+            else
+                sessionStorage.setItem(product,1);
+        }
     </script>
 
     <!--<style type="text/css">
@@ -73,42 +82,42 @@
     </a>
     <div class=grid>
         <div class=product>
-            <img class="product_img" src="./img/hat1.jpeg" data-alt-src="./img/hat1_select.jpeg"/>
+            <img onclick="addCart('1')" class="product_img" src="./img/hat1.jpeg" data-alt-src="./img/hat1_select.jpeg"/>
             <div class="product_name">Shrek 2020 Green and White Hat</div>
             <div class="product_price">$20.00</div>
         </div>
         <div class=product>
-            <img class="product_img" src="img/hat2.jpeg" data-alt-src="./img/hat2_select.jpeg"/>
+            <img onclick="addCart('2')" class="product_img" src="img/hat2.jpeg" data-alt-src="./img/hat2_select.jpeg"/>
             <div class="product_name">Shrek 2020 Green Hat</div>
             <div class="product_price">$20.00</div>
         </div>
         <div class=product>
-            <img class="product_img" src="img/shirt1.jpeg" data-alt-src="./img/shirt1_select.jpeg"/>
+            <img onclick="addCart('3')" class="product_img" src="img/shirt1.jpeg" data-alt-src="./img/shirt1_select.jpeg"/>
             <div class="product_name">Shrek 2020 Black Logo Shirt</div>
             <div class="product_price">$30.00</div>
         </div>
         <div class=product>
-            <img class="product_img" src="img/shirt2.jpeg" data-alt-src="./img/shirt2_select.jpeg"/>
+            <img onclick="addCart('4')" class="product_img" src="img/shirt2.jpeg" data-alt-src="./img/shirt2_select.jpeg"/>
             <div class="product_name">Shrek 2020 Green Logo Shirt</div>
             <div class="product_price">$30.00</div>
         </div>
         <div class=product>
-            <img class="product_img" src="img/shirt3.jpeg" data-alt-src="./img/shirt3_select.jpeg"/>
+            <img onclick="addCart('5')" class="product_img" src="img/shirt3.jpeg" data-alt-src="./img/shirt3_select.jpeg"/>
             <div class="product_name">Shrek 2020 Swamp Shirt</div>
             <div class="product_price">$35.00</div>
         </div>
         <div class=product>
-            <img class="product_img" src="img/mug.jpg" data-alt-src="./img/mug_select.jpg"/>
+            <img onclick="addCart('6')" class="product_img" src="img/mug.jpg" data-alt-src="./img/mug_select.jpg"/>
             <div class="product_name">Shrek 2020 Mug</div>
             <div class="product_price">$15.00</div>
         </div>
         <div class=product>
-            <img class="product_img" src="img/pin.jpg" data-alt-src="./img/pin_select.jpg"/>
+            <img onclick="addCart('7')" class="product_img" src="img/pin.jpg" data-alt-src="./img/pin_select.jpg"/>
             <div class="product_name">Shrek 2020 Button Pin</div>
             <div class="product_price">$10.00</div>
         </div>
         <div class=product>
-            <img class="product_img" src="img/sticker.png" data-alt-src="./img/sticker_select.png"/>
+            <img onclick="addCart('8')" class="product_img" src="img/sticker.png" data-alt-src="./img/sticker_select.png"/>
             <div class="product_name">Shrek 2020 Sticker</div>
             <div class="product_price">$10.00</div>
         </div>
