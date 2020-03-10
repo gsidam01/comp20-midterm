@@ -55,7 +55,7 @@ h3
         div.aboutBlock {
             /*Do a media query here and make 100%*/
             height: 500px;
-            width: 50%;
+            width: 49%;
             max-width: 830px;
             position: relative;
             border-style: solid;
