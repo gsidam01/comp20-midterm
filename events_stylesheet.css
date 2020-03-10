@@ -12,8 +12,12 @@ article
     margin: auto;
     align-content: center;
     align-items: center;
+    min-height: calc(90vh);
 }
-
+aside
+{
+    min-height: calc(60vh);
+}
 h2
 {
     display: inline-flex;
@@ -21,7 +25,15 @@ h2
     background-color: #eeeeee;
     border-style: double;
     border-width: 3px;
-    border-color: #964b00;
+    border-color: #75f514;
+    box-shadow: 0 0 10px #000;
+    border-radius: 5px;
+
+}
+
+h2:hover
+{
+    cursor: pointer;
 }
 
 #events_bar
@@ -32,15 +44,18 @@ h2
 
 #opening
 {
-    width: 100%;
+    width: 80%;
+    margin: 5% auto;
     text-align: center;
     font-weight: bold;
-    font-size: 150%;
-    margin: 5% 0%;
-
+    font-size: 250%;
+    color: #75f514;
 }
 
-
+html{
+    background-color: #523213;
+    height: 100%;
+}
 h3
 {
     margin-bottom: 5px;
@@ -55,6 +70,11 @@ section
     text-align: center;
     margin: 5px;
     padding: 3px;
+    border-color: #75f514;
+    background-color: #eeeeee;
+    box-shadow: 0 0 10px #000;
+    border-radius: 5px;
+
 }
 
 
@@ -91,3 +111,28 @@ section
     }
 }
 
+strong
+{
+    font-size: 200%;
+    font-weight: bold;
+}
+
+footer
+{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    bottom: 0px;
+    border-top-style: double;
+    border-top-color: #75f514;
+    text-align: center;
+    z-index: 5;
+    background-color: #75f514;
+    padding: 0px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #0000ff;
+    font-weight: bold;
+}

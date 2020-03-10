@@ -1,0 +1,24 @@
+/*<footer id="footer">
+	Call us at: Shrek-4-prez (747-354-7739), or send an email to <a href="mailto:elect.shrek@gmail.com">elect.shrek@gmail.com</a> for all media, photo-op, and legal enquiries.
+</footer>
+*/
+
+footer
+{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    bottom: 0px;
+    border-top-style: double;
+    border-top-color: #75f514;
+    text-align: center;
+    z-index: 5;
+    background-color: #75f514;
+    padding: 0px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #0000ff;
+    font-weight: bold;
+}
