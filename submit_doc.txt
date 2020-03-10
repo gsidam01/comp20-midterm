@@ -1,0 +1,80 @@
+*Group name:
+  #our_team{skills: mad;}
+
+*URL of the site online:
+  https://gsidam01.github.io/comp20-midterm/index.html
+
+*What does the business or organization do and how the website will help them:
+  Our website is the campaign website for Shrek's 2020 presidentail run.  Ideally, citizens of the world will interact with
+  his online presence and understand that he is the best candidate to lead our country.
+  
+*The section of code you are most proud of including an explanation of why you picked it and how it works.  It can be anything from 2 lines to 50 lines of code.
+  George: the issues.html page element which shows Shrek's stance on issues only when hovered over
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $(".issue").hover(function() {
+                $(this).find("img").css("opacity", "0.3");
+                $(this).find(".text").css("opacity", "1");
+            }, function() {
+                $(this).find("img").css("opacity", "1");
+                $(this).find(".text").css("opacity", "0");
+            });
+        });
+        </script>
+        
+  Gabe:
+  
+  Miles:
+  
+  Ryan:
+  
+*List each project requirement and how/where it was met:
+  1. at least 7 pages
+    - index.html, about.html, issues.html, events.html, merch.html, donate.html, cart.html
+  2. external and internal style sheet
+    - external stylesheet: topnav.css ... present on most pages except for special circumstances
+    - internal stylesheet: see issues.html
+  3. fixed page elements (navigation/header/footer) as appropriate per page
+    - header (including nav bar) and footer on all pages except donate.html which intentionally has a slightly different "feel"
+
+  4. consistent look and feel across all pages
+    - same header and footer, "Shrek" font, lots of green and brown colors
+
+  5. incorporates Javascript and jQuery
+    - Javascript present, for example: linked to events.html via events.js, purpose: show/hide elements of the page depending on button clicks
+    - jQuery present, for example: changes the campaign photo displayed on the page
+    
+  6. include a jQuery "special effect" (animation, fade, etc)
+    -
+
+  7. includes a form
+    -
+
+  8. at least one page must have multiple columns
+    -
+
+  9. responsive and mobile friendly - must pass this test: https://search.google.com/test/mobile-friendly (Links to an external site.)
+    -
+  
+  10. works online
+    -
+
+  11. no broken links
+    -
+
+  12. no "lorum ipsum" content
+    -
+
+
+
+*How did each team member contributed to the project
+  Collective: brainstorming ideas for content, theme, pages,
+  
+  George: created events.html, events.js, events_stylesheet.css, footer html code, footer_stylesheet.css, partial(/original) topnav.css until Miles' update
+  
+  Gabe:
+  
+  Miles:
+  
+  Ryan:
+  
