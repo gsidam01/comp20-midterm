@@ -5,21 +5,43 @@
     <meta name="description" content="Shrek's Presidential Campaign"/>
     <meta name="keywords" content="Shrek, President, Fill, The, Swamp"/>
     <title>Shrek 2020</title>
-    <link rel="stylesheet" type="text/css" href="./merch_stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="./cart_stylesheet.css" />
     <!--<link rel="stylesheet" type="text/css" media="(min-width: 200px) and (max-width:999px)" href="sm_stylesheet.css" />-->
     <link rel="stylesheet" type="text/css" href="topnav.css" />
 
-    <script>
+    <script type="text/javascript">
         function loadCart() {
-            var arr =
+            var arr = [];
+            var empty = true;
             for (i = 1; i <= 8; i++) {
-                if (sessionStorage.getItem(i)) {
-                    
-                }
+                if (sessionStorage.getItem("p"+i)) {
+                    arr[i-1] = parseInt(sessionStorage.getItem("p"+i));
+                    console.log(i+ ": " + arr[i-1]);
+                    empty = false;
+                } else
+                    arr[i-1] = 0;
             }
-            document.write("<table>");
+            if (empty)
+                document.write("<div class='linkshopping'>Nothing in your cart.<br><br><a href='./merch.html'>Continue Shopping?</a></div>");
+            else {
+                document.write("<table><tr><th>Product</th><th>Quantity</th><th>Price</th></tr>");
+                var totalCost = 0;
+                for (i = 1; i <= 8; i++) {
+                    if (sessionStorage.getItem("p"+i)) {
+                        totalCost += (idToCost(i) * sessionStorage.getItem("p"+i));
+                        document.write("<tr><th>"+idToProduct(i)+"</th><th>"+
+                            sessionStorage.getItem("p"+i)+"</th><th>$"+
+                            idToCost(i) * sessionStorage.getItem("p"+i)+"</th></tr>");
+                    }
+                }
+                document.write("<tr><th>TOTAL</th><th>---</th><th>$"+totalCost+"</th></tr>");
+                document.write("</table><br><a class='linkshopping' href='./merch.html'>Continue Shopping?</a><br>");
+            }
         }
 
+        function clearCart() {
+            sessionStorage.clear();
+        }
         function idToProduct(id) {
             switch(id) {
                 case 1:
@@ -50,6 +72,36 @@
                     return "";
             }
         }
+        function idToCost(id) {
+            switch(id) {
+                case 1:
+                    return 20;
+                    break;
+                case 2:
+                    return 20;
+                    break;
+                case 3:
+                    return 30;
+                    break;
+                case 4:
+                    return 30;
+                    break;
+                case 5:
+                    return 35;
+                    break;
+                case 6:
+                    return 15;
+                    break;
+                case 7:
+                    return 10;
+                    break;
+                case 8:
+                    return 10;
+                    break;
+                default:
+                    return 0;
+            }
+        }
     </script>
 </head>
 
@@ -68,6 +120,12 @@
             </ul>
         </div>
 </header>
-<main onload="loadCart()">
-    <h1 class="store_title">Shrek 2020 Store</h1>
+<main onload="loadCart">
+    <h1 class="store_title">Cart</h1>
+    <script type="text/javascript">
+        window.onload = loadCart();
+    </script>
+    <br>
+    <a class="linkshopping" onclick="clearCart()" href="./cart.html">Clear Cart</a>
+    <div class="checkout">Checkout</div>
 </main>

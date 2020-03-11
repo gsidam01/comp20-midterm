@@ -9,7 +9,7 @@
 
 main
 {
-	margin-top: 350px;
+	margin-top: 100px;
 	color: #03A900;
     font-family: arial,georgia;
 
@@ -27,14 +27,55 @@ h2
 	background-color: #eeeeee;
 }
 
+.linkshopping {
+    margin-top:50px;
+    margin-left:100px;
+}
+table {
+    margin-left:100px;
+}
+table, th, td {
+  border: 1px solid black;
+}
+
+tr
+{
+    color:#523213;
+}
 h1.store_title
 {
 	position:relative;
-	text-align:center;
-	margin-left:25%;
+	margin-left:100px;
 	margin-right:25%;
 	font-family: 'Shrek',georgia;
 	font-size:50px
+}
+
+.checkout
+{
+color: rgb(255, 255, 255);
+font-size: 16px;
+line-height: 16px;
+padding: 6px;
+border-radius: 10px;
+font-family: "Arial Black", Gadget, sans-serif;
+font-style: oblique;
+font-variant: normal;
+text-transform: none;
+background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%);
+box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px;
+border: 20px ridge rgb(30, 78, 164);
+width: 85px;
+margin-top: 100px;
+margin-left: 100px;
+}
+
+.checkout:hover
+{
+background: #1C6EA4; }
+
+.checkout:active {
+background: #144E75; }
 }
 
 #events_bar
